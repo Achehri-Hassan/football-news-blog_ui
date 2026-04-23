@@ -1,44 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins" , sans-serif;
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "poppins", sans-serif;
 }
 
 
 
-:root{
-    --bg-color:#F2E9E4;
-    --second-color:#0E131F;
-    --white:#ffffff;
+:root {
+     --bg-color: #F2E9E4;
+     --second-color: #0E131F;
+     --white: #ffffff;
 }
 
 
 
-body{
-     background-color:var(--bg-color);
+body {
+     background-color: var(--bg-color);
 }
 
-header{     
-    
-     background-image: url(../assets/pexels-ketchumcommunity-1464200.jpg);
+header {
 
-     height: 50vh;
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-position: center;
-     border-bottom-right-radius: 50px;
-     border-bottom-left-radius: 50px;
-     position: relative;
-
-      
+     background-color: var(--second-color);
+     position: fixed;
+     width: 100%;
+     top: 0;
+     z-index: 999;
 }
 
-.head{
+.head {
 
      display: flex;
      align-items: center;
@@ -47,69 +40,68 @@ header{
 }
 
 
-.head div{
-    margin-top: 60px;
+.head div {
      display: flex;
      align-items: center;
      gap: 60px;
      padding: 15px;
-     background-color: var(--white);
-     border-radius: 10px;
-    
+
+
 }
 
-.head div .logo i{
-     color: var(--second-color);
+.head .logo i {
+     color: var(--white);
      font-size: 30px;
 }
 
 
-.head div nav{
-     margin-left: 75px;
-}
 
-.head div nav a{
+.head div nav a {
      margin-left: 30px;
-     color: var(--second-color);
+     color: var(--white);
      font-weight: 600;
      text-decoration: none;
 }
 
 
-.btn-login{
-    margin-top: 60px;
+.btn-login {
      padding: 0.6rem 40px;
      border-radius: 10px;
      color: var(--second-color);
      font-weight: 600;
      font-size: 14px;
      cursor: pointer;
-     border:2px solid var(--bg-color);
+     background-color: var(--bg-color);
+     border: 2px solid var(--bg-color);
 }
 
 
 
 /* started main content */
 
-.card{
-     margin-top: 3rem;
+
+.card {
+     /* margin-top: 12rem; */
+     padding-top: 10rem;
+  
      display: flex;
      align-items: center;
      justify-content: center;
      gap: 40px;
 }
 
-.card__image{
-     width: 300px;
+.card__image {
+     width: 500px;
      height: auto;
+     border-radius: 10px;
 }
 
-.card__content{
-      max-width: 600px;
+.card__content {
+     max-width: 600px;
 }
 
 
-.card__date{
+.card__date {
      background-color: var(--second-color);
      width: fit-content;
      padding: 0.3rem 30px;
@@ -118,116 +110,98 @@ header{
      font-weight: 600;
 }
 
-.card__title{
+.card__title {
      font-size: 2.7rem;
 }
 
-.card__description{
-     font-weight: 500;
+.card__description {
+     font-weight: 400;
      margin-bottom: 5px;
 }
-
-.card__author{
-    margin-top: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-}
-.card__author img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.card__author .author__name{
-     font-weight: 500;
-     font-size: 15px;
-}
-
-.card__author .author__rating i{
-     font-size: 15px;
-}
-
-
 
 
 /* style article design */
 .article-card {
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; 
-    padding: 40px;
+     margin-top: 4rem;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     padding: 40px;
 }
 
 /* 2. Individual Card Styling */
 .article {
-    background-color: var(--white);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    height: 440px;
-    width: 370px;
-    padding-bottom: 20px;
-    cursor: pointer;
+     background-color: var(--white);
+     border-radius: 15px;
+     overflow: hidden;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+     height: 440px;
+     width: 370px;
+     padding-bottom: 20px;
+     cursor: pointer;
+     position: relative;
+}
+
+.article .news {
+     width: fit-content;
+     position: absolute;
+     background-color: var(--second-color);
+     color: var(--white);
+     margin-left: 10px;
+     margin-top: 10px;
+     padding: 0.5rem 20px;
+     border-radius: 10px;
 }
 
 
 .article img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; 
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
 }
 
-.article .category{ 
+.article .category {
      margin-top: 15px;
-    padding: 8px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+     margin-left: 10px;
+     width: fit-content;
 }
 
-.article .category :first-child{
+.article .category P {
      background-color: var(--second-color);
      color: var(--white);
-     padding: 6px;
+     padding: 0.3rem 20px;
      border-radius: 7px;
 }
 
-.article .category :last-child{
-     font-weight: 500;
-     font-size: 20px;
-     margin-right: 10px;
-}
 
-.article p{
+.article p {
+     margin-top: 10px;
      padding: 8px;
      color: var(--second-color);
-    font-weight: 400;
+     font-weight: 400;
+     margin-left: 10px;
 }
 
 
 .pagination {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 15px; 
-    padding-bottom: 50px;
+     margin-top: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+     padding-bottom: 50px;
 }
 
 .pagination__btn {
-    width: 40px;
-    height: 40px;
-    background-color:var(--second-color); 
-    color: var(--white);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-weight: bold;
-    font-size: 16px;
+     width: 40px;
+     height: 40px;
+     background-color: var(--second-color);
+     color: var(--white);
+     text-decoration: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     font-weight: bold;
+     font-size: 16px;
 }
-
