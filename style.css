@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins" , sans-serif;
+}
+
+
+
+:root{
+    --bg-color:#F2E9E4;
+    --second-color:#0E131F;
+    --white:#ffffff;
+}
+
+
+header{
+     background-image: url(assets/header-Img.jpg);
+     height: 100vh;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     border-bottom-right-radius: 100px;
+     border-bottom-left-radius: 100px;
+     position: relative;
+
+     
+}
+
+.head{
+   
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-inline: 5rem;
+}
+
+
+.head div{
+    margin-top: 30px;
+     display: flex;
+     align-items: center;
+     gap: 60px;
+     padding: 20px;
+     background-color: var(--white);
+     border-radius: 10px;
+}
+
+.head div .logo i{
+     color: var(--second-color);
+     font-size: 30px;
+}
+
+
+.head div nav{
+     margin-left: 75px;
+}
+
+.head div nav a{
+     margin-left: 30px;
+     color: var(--second-color);
+     font-weight: 600;
+     text-decoration: none;
+}
+
+
+.btn-login{
+    margin-top: 30px;
+     padding: 0.6rem 40px;
+     border-radius: 10px;
+     color: var(--second-color);
+     font-weight: 600;
+     font-size: 14px;
+     cursor: pointer;
+}
+
+
+/* Section home  */
+.home-section{
+    margin-top: 40px;
+     position: absolute;
+     top: 50%;
+     left: 5rem;
+     transform: translateY(-50%);
+     /* max-width: 500px; */
+}
+
+.home-section h1{
+     font-size: 5rem;
+     margin-bottom: 10px;
+     color: var(--white);
+}
+
+.home-section p{
+     margin-bottom: 20px;
+     line-height: 1.6;
+     color: var(--white);
+     margin-bottom: 30px;
+}
+
+.home-section button{
+     padding: 10px 20px;
+     border-radius: 8px;
+     border: none;
+     cursor: pointer;
+     color: var(--second-color);
+     font-weight: 600;
+}
