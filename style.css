@@ -17,21 +17,28 @@
 }
 
 
-header{
+
+body{
+     background-color:var(--bg-color);
+}
+
+header{     
+    
      background-image: url(assets/header-Img.jpg);
-     height: 100vh;
+
+     height: 50vh;
      background-size: cover;
      background-repeat: no-repeat;
      background-attachment: fixed;
-     border-bottom-right-radius: 100px;
-     border-bottom-left-radius: 100px;
+     border-bottom-right-radius: 50px;
+     border-bottom-left-radius: 50px;
      position: relative;
 
-     
+      
 }
 
 .head{
-   
+
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -40,13 +47,14 @@ header{
 
 
 .head div{
-    margin-top: 30px;
+    margin-top: 60px;
      display: flex;
      align-items: center;
      gap: 60px;
-     padding: 20px;
+     padding: 15px;
      background-color: var(--white);
      border-radius: 10px;
+    
 }
 
 .head div .logo i{
@@ -68,44 +76,175 @@ header{
 
 
 .btn-login{
-    margin-top: 30px;
+    margin-top: 60px;
      padding: 0.6rem 40px;
      border-radius: 10px;
      color: var(--second-color);
      font-weight: 600;
      font-size: 14px;
      cursor: pointer;
+     border:2px solid var(--bg-color);
 }
 
 
-/* Section home  */
-.home-section{
-    margin-top: 40px;
-     position: absolute;
-     top: 50%;
-     left: 5rem;
-     transform: translateY(-50%);
-     /* max-width: 500px; */
+
+/* started main content */
+
+.card{
+     margin-top: 3rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 40px;
 }
 
-.home-section h1{
-     font-size: 5rem;
-     margin-bottom: 10px;
+.card__image{
+     width: 300px;
+     height: auto;
+}
+
+.card__content{
+      max-width: 600px;
+}
+
+
+.card__date{
+     background-color: var(--second-color);
+     width: fit-content;
+     padding: 0.3rem 30px;
      color: var(--white);
-}
-
-.home-section p{
-     margin-bottom: 20px;
-     line-height: 1.6;
-     color: var(--white);
-     margin-bottom: 30px;
-}
-
-.home-section button{
-     padding: 10px 20px;
      border-radius: 8px;
-     border: none;
-     cursor: pointer;
-     color: var(--second-color);
      font-weight: 600;
+}
+
+.card__title{
+     font-size: 2.7rem;
+}
+
+.card__description{
+     font-weight: 500;
+     margin-bottom: 5px;
+}
+
+.card__author{
+    margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+.card__author img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__author .author__name{
+     font-weight: 500;
+     font-size: 15px;
+}
+
+.card__author .author__rating i{
+     font-size: 15px;
+}
+
+
+
+
+/* style article design */
+.article-card {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 40px;
+}
+
+/* 2. Individual Card Styling */
+.article {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 440px;
+    padding-bottom: 20px;
+}
+
+
+.article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.article .category{ 
+    padding: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.article .category :first-child{
+     background-color: var(--second-color);
+     color: var(--white);
+     padding: 6px;
+     border-radius: 7px;
+}
+
+.article .category :last-child{
+     font-weight: 600;
+     font-size: 20px;
+     margin-right: 10px;
+}
+
+.article p{
+     padding: 8px;
+     color: var(--second-color);
+    font-weight: 500;
+}
+
+
+.article__author{
+     display: flex;
+     padding: 8px;
+     align-items: center;
+     margin-bottom: 60px;
+}
+
+.article__author img{
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+}
+
+.article__author .article__details  P{
+     font-weight: 600;
+}
+
+.article__author .article__details .article__rating{
+     margin-top: -10px;
+     margin-left: 6px;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px; 
+    padding-bottom: 50px;
+}
+
+.pagination__btn {
+    width: 40px;
+    height: 40px;
+    background-color:var(--second-color); 
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
 }
