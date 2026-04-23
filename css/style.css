@@ -24,12 +24,13 @@ body{
 
 header{     
     
-     background-image: url(assets/header-Img.jpg);
+     background-image: url(../assets/pexels-ketchumcommunity-1464200.jpg);
 
      height: 50vh;
      background-size: cover;
      background-repeat: no-repeat;
      background-attachment: fixed;
+     background-position: center;
      border-bottom-right-radius: 50px;
      border-bottom-left-radius: 50px;
      position: relative;
@@ -167,6 +168,7 @@ header{
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     height: 440px;
+    width: 370px;
     padding-bottom: 20px;
     cursor: pointer;
 }
@@ -207,6 +209,7 @@ header{
 
 
 .pagination {
+    margin-top: 10px;
     display: flex;
     justify-content: center; 
     align-items: center;

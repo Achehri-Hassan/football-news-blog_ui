@@ -22,12 +22,20 @@
 
 
 
+body{
+     background:var(--white);
+}
+
+.contact-nav{
+    max-width: 900px;
+}
+
+
 
 .contact-container {
     display: flex;
     max-width: 900px;
     margin: 50px auto;
-   
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
 }

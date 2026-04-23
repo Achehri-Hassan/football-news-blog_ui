@@ -8,11 +8,15 @@
     --white:#ffffff;
 }
 
+
+
+
 /* FOOTER */
 .footer {
-    margin-top: -30px;
+    margin-top: -90px;
     padding: 60px 40px 20px 40px;
     font-family: sans-serif;
+
 }
 
 /* Black Container */
@@ -77,8 +81,9 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
-     margin: auto;
-    padding-top: 20px;
+     margin:-30px auto;
+    
+    
 }
 
 .footer__logo i{
