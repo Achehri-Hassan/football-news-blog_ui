@@ -25,10 +25,10 @@ body {
 header {
 
      background-color: var(--second-color);
-     position: fixed;
+     /* position: fixed;
      width: 100%;
      top: 0;
-     z-index: 999;
+     z-index: 999; */
 }
 
 .head {
@@ -82,7 +82,7 @@ header {
 
 .card {
      /* margin-top: 12rem; */
-     padding-top: 10rem;
+     padding-top: 7rem;
   
      display: flex;
      align-items: center;
