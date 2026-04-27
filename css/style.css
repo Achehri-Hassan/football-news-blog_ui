@@ -233,7 +233,7 @@ main {
         font-size: 2.8rem;
     }
 
-    /* L-featured card kat-welli wa7da teht wa7da */
+    
     .featured-card {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -249,13 +249,13 @@ main {
         align-items: center;
     }
 
-    /* Grid dyal l-articles ywelli fih 2 f l-ster */
+    
     .article-card {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .article {
-        width: 100%; /* Bach t-adapta m3a l-grid */
+        width: 100%;
         height: auto;
     }
 }
