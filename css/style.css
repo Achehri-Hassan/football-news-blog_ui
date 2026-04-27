@@ -9,124 +9,124 @@
 }
 
 
-
-:root {
-     --bg-color: #F2E9E4;
-     --second-color: #0E131F;
-     --white: #ffffff;
-}
-
-
-
 body {
-     background-color: var(--bg-color);
+     background-color: var(--white);
 }
 
-header {
 
-     background-color: var(--second-color);
-     /* position: fixed;
-     width: 100%;
-     top: 0;
-     z-index: 999; */
+
+main {
+     max-width: 1400px;
+     margin: 0 auto;
+     padding: 4rem 2rem;
 }
 
-.head {
+.hero-section {
+     margin-bottom: 3rem;
+
+}
+
+.hero-section h1 {
+     font-size: 3.5rem;
+     font-weight: 700;
+     margin-bottom: 2rem;
+     letter-spacing: -1px;
+}
+
+
+
+/* Modern Category Pills (instead of select) */
+.category-filters {
 
      display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding-inline: 5rem;
+     gap: 12px;
+     margin-bottom: 3rem;
+     flex-wrap: wrap;
 }
 
-
-.head div {
-     display: flex;
-     align-items: center;
-     gap: 60px;
-     padding: 15px;
-
-
-}
-
-.head .logo i {
-     color: var(--white);
-     font-size: 30px;
-}
-
-
-
-.head div nav a {
-     margin-left: 30px;
-     color: var(--white);
-     font-weight: 600;
-     text-decoration: none;
-}
-
-
-.btn-login {
-     padding: 0.6rem 40px;
-     border-radius: 10px;
+.filter-pill {
+     padding: 8px 20px;
+     border-radius: 20px;
+     background: var(--white);
      color: var(--second-color);
-     font-weight: 600;
-     font-size: 14px;
-     cursor: pointer;
-     background-color: var(--bg-color);
-     border: 2px solid var(--bg-color);
+     text-decoration: none;
+     border: 2px solid var(--second-color);
+     font-size: 0.9rem;
+     font-weight: 500;
+     transition: 0.3s;
+}
+
+.filter-pill.active {
+     background: var(--second-color);
+     color: var(--white);
 }
 
 
 
-/* started main content */
 
+.featured-card {
 
-.card {
-     /* margin-top: 12rem; */
-     padding-top: 7rem;
-  
-     display: flex;
+     display: grid;
+     grid-template-columns: 1.5fr 1fr;
+     gap: 3rem;
      align-items: center;
-     justify-content: center;
-     gap: 40px;
-}
-
-.card__image {
-     width: 500px;
-     height: auto;
-     border-radius: 10px;
-}
-
-.card__content {
-     max-width: 600px;
+     margin-bottom: 6rem;
 }
 
 
-.card__date {
+.featured-img {
+     width: 100%;
+     height: 450px;
+     object-fit: cover;
+     border-radius: 24px;
+}
+
+.tag-news {
      background-color: var(--second-color);
      width: fit-content;
-     padding: 0.3rem 30px;
+     padding: 0.5rem 30px;
+     border-radius: 4px;
+     font-size: 0.8rem;
      color: var(--white);
-     border-radius: 8px;
      font-weight: 600;
+     text-transform: uppercase;
+     margin-bottom: 1rem;
+     display: block;
 }
 
-.card__title {
-     font-size: 2.7rem;
+.featured-title {
+     font-size: 2.2rem;
+     line-height: 1.2;
+     margin-bottom: 1.5rem;
 }
 
-.card__description {
-     font-weight: 400;
-     margin-bottom: 5px;
+.featured-desc {
+     color: var(--text);
+     line-height: 1.6;
+     margin-bottom: 2rem;
+
 }
+
+.btn-read {
+     background: var(--second-color);
+     color: var(--white);
+     padding: 12px 28px;
+     border-radius: 8px;
+     text-decoration: none;
+     font-weight: 500;
+     display: inline-block;
+}
+
 
 
 /* style article design */
 .article-card {
      margin-top: 4rem;
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
      gap: 30px;
-     padding: 40px;
+     padding: 0;
+     margin-bottom: 4rem;
 }
 
 /* 2. Individual Card Styling */
@@ -177,7 +177,7 @@ header {
 .article p {
      margin-top: 10px;
      padding: 8px;
-     color: var(--second-color);
+      color: var(--text);
      font-weight: 400;
      margin-left: 10px;
 }
@@ -204,4 +204,134 @@ header {
      border-radius: 50%;
      font-weight: bold;
      font-size: 16px;
+}
+
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* 1. Large Tablets & Laptops (Max 1200px) */
+@media (max-width: 1200px) {
+    main {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+    
+    .featured-card {
+        gap: 2rem;
+    }
+    
+    .featured-title {
+        font-size: 2rem;
+    }
+}
+
+/* 2. Tablets (Max 992px) */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    /* L-featured card kat-welli wa7da teht wa7da */
+    .featured-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .featured-img {
+        height: 350px;
+    }
+
+    .featured-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Grid dyal l-articles ywelli fih 2 f l-ster */
+    .article-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article {
+        width: 100%; /* Bach t-adapta m3a l-grid */
+        height: auto;
+    }
+}
+
+/* 3. Mobile Phones (Max 768px) */
+@media (max-width: 768px) {
+    /* Header & Nav Fix */
+    .head {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .head div {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0 !important;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .category-filters {
+        justify-content: center;
+    }
+
+    /* Articles Grid ywelli fih 1 f l-ster */
+    .article-card {
+        grid-template-columns: 1fr;
+    }
+
+    .article {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Footer */
+    .footer__cta {
+        padding: 2rem 1rem;
+    }
+
+    .cta__title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 4. Small Mobile (Max 480px) */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .filter-pill {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    .featured-img {
+        height: 250px;
+    }
+
+    .featured-title {
+        font-size: 1.5rem;
+    }
 }
